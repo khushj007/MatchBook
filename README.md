@@ -64,3 +64,5 @@ npm run dev
 # Run the backend application
 npm run start
 ```
+
+**Note:** The backend response may sometimes experience delays, so please be patient during the loading process.
