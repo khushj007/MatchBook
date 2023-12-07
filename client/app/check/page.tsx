@@ -17,7 +17,7 @@ const MainPage = () => {
     image: "/default",
     yop: 0,
   });
-  const [display, setDisplay] = useState(-1);
+  const [display, setDisplay] = useState(1);
   const [loading, setLoading] = useState(false);
 
   async function submitResponse(e: any) {
