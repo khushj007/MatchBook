@@ -42,7 +42,7 @@ const MainPage = () => {
       };
 
       const response = await axios.post(
-        "http://localhost:4000/api/check",
+        "https://matchbookbackend.onrender.com/api/check",
         data
       );
 

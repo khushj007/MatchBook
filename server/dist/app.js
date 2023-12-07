@@ -24,4 +24,7 @@ app.use((0, cors_1.default)());
 }))();
 //routes
 app.use("/api", mainRouter_1.default);
+app.get("/", (req, res) => {
+    res.send("working");
+});
 exports.default = app;
