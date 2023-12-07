@@ -1,18 +1,17 @@
 import React from "react";
 import "./Result.css";
 import Image from "next/image";
+import { useStore } from "@/Context/Store";
 
 interface PROPS {
-  disp: number;
-  setValue: any;
   data: { name: string; image: string; yop: number };
 }
-const Result = ({ disp, setValue, data }: PROPS) => {
-  console.log(`child`, data);
+const Result = ({ data }: PROPS) => {
+  const { display, setDisplay } = useStore();
   return (
     <div
       className="result"
-      style={disp === -1 ? { display: "" } : { display: "none" }}
+      style={display === -1 ? { display: "" } : { display: "none" }}
     >
       <div className="showBox">
         <h1>Book Aligns with Personality</h1>
@@ -22,7 +21,7 @@ const Result = ({ disp, setValue, data }: PROPS) => {
         <button
           className="mbutton"
           onClick={() => {
-            setValue(1);
+            setDisplay(1);
           }}
         >
           GO BACK

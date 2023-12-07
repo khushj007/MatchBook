@@ -1,0 +1,29 @@
+.navbar {
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  display: flex;
+  height: 4em;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f9e8d9;
+  padding: 1em;
+}
+
+.navbar > h2 {
+  color: #ee7214;
+  font-size: 2em;
+}
+
+.sides {
+  height: 100%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.sides {
+  color: #ee7214;
+  font-size: 1em;
+}

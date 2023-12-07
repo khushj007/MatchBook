@@ -1,4 +1,3 @@
-import React, { ChangeEvent } from "react";
 interface Props {
   name: string;
   type: string;

@@ -1,11 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import "./check.css";
-import Input from "@/components/Input";
-import Loader from "@/components/Loader";
+import Input from "@/components/Input/Input";
+import Loader from "@/components/Loader/Loader";
 import axios from "axios";
 import { toast } from "react-toastify";
 import Result from "@/components/Result/Result";
+import { useStore } from "@/Context/Store";
 
 const MainPage = () => {
   const [name, setName] = useState("");
@@ -17,7 +18,7 @@ const MainPage = () => {
     image: "/default",
     yop: 0,
   });
-  const [display, setDisplay] = useState(1);
+  const { display, setDisplay } = useStore();
   const [loading, setLoading] = useState(false);
 
   async function submitResponse(e: any) {
@@ -47,13 +48,11 @@ const MainPage = () => {
       );
 
       if (response.status === 201) {
-        console.log(`response data name`, response.data.data);
         let newData = {
           name: response.data.data.name,
           yop: response.data.data.yop,
           image: response.data.data.image,
         };
-        console.log(`newData`, newData);
         setData(newData);
         setDisplay(-1);
       }
@@ -119,7 +118,7 @@ const MainPage = () => {
           Submit Response
         </button>
       </div>
-      <Result setValue={setDisplay} disp={display} data={data} />
+      <Result data={data} />
     </>
   );
 };
