@@ -1,0 +1,41 @@
+.mainPage {
+  background-color: #f1eb90;
+  height: 730px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.mainPage > h2 {
+  font-size: 2em;
+  color: #ec8f5e;
+}
+
+.input,
+.select {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.input > label,
+.select > label {
+  text-align: center;
+  font-size: 1em;
+  color: #e3651d;
+}
+.input > input {
+  padding: 0.2em 1em;
+  border: 1px solid #e3651d;
+  border-radius: 1em;
+}
+
+.select > select {
+  padding: 0.2em 0.5em;
+  border: 1px solid #e3651d;
+  border-radius: 1em;
+}
